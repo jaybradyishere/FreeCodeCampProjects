@@ -1,0 +1,196 @@
+:root {
+    --primary-color: #DB3A34;
+    --secondary-color:  #FFC857;
+    --text-shadow: 5px  10px 15px rgba(0, 0, 0, 0.2);
+    --image-shadow: 2px  2px 20px rgba(0, 0, 0, 0.2);
+}
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  
+html {
+    font-size: 100%;
+  }
+
+
+  /* Nav Bar And Menu's */
+#header {
+margin: 0px 410px;
+max-height: 800px;
+max-width: 50%;
+/* outline: 3px solid red; */
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    gap: 40px;
+    width: 20%;
+    margin-left: 821px;
+    font-size: 1.5rem;
+    outline: 3px solid red
+}
+
+/* Header Images And Text */
+
+.logo {
+    margin:5px 2px;
+    width: 10%;
+    max-width: 15%;
+    margin: 0px -200px;
+    outline: 3px solid red;
+}
+
+/* Main text & writing in the middle of page */
+
+.text-container1 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-items: start;
+    justify-content: start;
+    margin: 0px 20%;
+    padding: 0px;
+    margin-top: 5px;
+    max-width: 100%;
+    min-width: 60%;
+    outline: 3px solid red  
+}
+
+p {
+    text-align: start;
+}
+
+h3 {
+    align-items: start;
+    text-align: start;
+    text-justify: auto;
+}
+
+
+img:not(.logo){
+    transform: scale(1.5);
+    margin-bottom: 32px;
+    margin: -70px -40px;
+    outline: 3px solid red
+}
+
+.business-slogans { 
+    margin: 0px auto;
+    max-width: 100%;
+    font-size: 1.5rem;
+
+}
+
+
+
+/* Embedded video  */
+
+video { 
+    border: 1px solid var(--secondary-color);
+    box-shadow: var(--image-shadow);
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0px 45%;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    min-width: 15%;
+    outline: 3px solid red
+}
+
+
+/* Submission Button */
+
+
+
+#email {
+    display: block;
+    margin: -125px auto ;
+    max-width: 100%;
+    outline: 3px solid red
+}
+
+/* #submit {
+    margin: 0px 280px;
+    margin-top: 105px;  
+} */
+
+@media only screen and (max-width: 480px) {
+
+    .text-container1 {
+        width: 60%;
+        margin: 0px 85px;
+    }
+    video {
+        margin: 0px 100px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center; /* Horizontal centering */
+        align-items: center;
+        width: 50%;
+    }
+
+    #header {
+        margin: 10px 40px;
+        width: 100rem;
+        margin-bottom: 50px;
+        outline: 3px solid red;
+    }
+
+    .logo {
+        margin-top: 5px;
+        margin-left: 1px;
+    }
+
+    #email {
+        margin-bottom: 20px;
+        margin: 10px px;
+        margin-top: 20px;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    
+    .text-container1 {
+        width: 60%;
+        margin: 0px 150px;
+    }
+
+    video {
+        margin: 0px 200px;
+        margin-top: 25px;
+        display: flex;
+        width: 50%;
+        overflow: hidden;
+    }
+
+    #header {
+        margin: 10px 70px;
+        width: 100rem;
+        margin-bottom: 50px;
+        outline: 3px solid red;
+        overflow: hidden;
+    }
+
+    .logo {
+        margin-top: 5px;
+        margin-left: 1px;
+        outline: 3px solid red;
+    }
+
+    #email {
+        margin: 0px 250px;
+        margin-top: 10px;
+        width: 40%;
+        padding-bottom: 20px;
+    }
+
+}
