@@ -1,65 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,800&display=swap');
+
 :root {
     --primary-color: #DB3A34;
     --secondary-color:  #FFC857;
     --text-shadow: 5px  10px 15px rgba(0, 0, 0, 0.2);
-    --image-shadow: 2px  2px 20px rgba(0, 0, 0, 0.2);
+    --image-shadow: 2px  2px 8px rgba(0, 0, 0, 0.2);
+    --Outline-helper: 3px solid red;
+    --Transparent-Overlay: hsl(0, 0%, 100%, 0.1) ;
+    --box-shadow: 1px  1px 5px rgba(0, 0, 0, 0.1);
 }
 
-*, ::before, ::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  
 html {
     font-size: 100%;
+    box-sizing: border-box
   }
 
 
-  /* Nav Bar And Menu's */
+
+*, ::before, ::after {
+    box-sizing: inherit;
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*  General Additional stylings  */
+
+.bottom-border{
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+
+
+  /* Nav Bar And Header */
 #header {
-margin: 0px 410px;
-max-height: 800px;
-max-width: 50%;
-/* outline: 3px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: -10px auto;
 }
 
 #nav-bar {
     display: flex;
-    flex-direction: row;
-    text-align: right;
-    gap: 40px;
-    width: 20%;
-    margin-left: 821px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
     font-size: 1.5rem;
-    outline: 3px solid red
 }
 
-/* Header Images And Text */
 
 .logo {
-    margin:5px 2px;
-    width: 10%;
-    max-width: 15%;
-    margin: 0px -200px;
-    outline: 3px solid red;
+    flex-basis: 150px;
 }
 
 /* Main text & writing in the middle of page */
+.main-container {
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
 
 .text-container1 {
-    display: flex;
-    flex-direction: column;
     text-align: start;
     justify-items: start;
     justify-content: start;
-    margin: 0px 20%;
+    flex-direction: row;
+    margin: 0px auto;
     padding: 0px;
     margin-top: 5px;
-    max-width: 100%;
-    min-width: 60%;
-    outline: 3px solid red  
+    max-width: 90%;
 }
 
 p {
@@ -77,7 +91,7 @@ img:not(.logo){
     transform: scale(1.5);
     margin-bottom: 32px;
     margin: -70px -40px;
-    outline: 3px solid red
+    /* outline: 3px solid red */
 }
 
 .business-slogans { 
@@ -94,103 +108,111 @@ img:not(.logo){
 video { 
     border: 1px solid var(--secondary-color);
     box-shadow: var(--image-shadow);
-    display: inline-flex;
-    flex-direction: column;
-    margin: 0px 45%;
+    display: block;
+    height: 325px;
+    margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 150px;
-    min-width: 15%;
-    outline: 3px solid red
 }
 
 
 /* Submission Button */
 
 
-
-#email {
-    display: block;
-    margin: -125px auto ;
-    max-width: 100%;
-    outline: 3px solid red
+.sign-up {
+    text-align: center;
+    margin: -125px auto;
 }
 
-/* #submit {
-    margin: 0px 280px;
-    margin-top: 105px;  
-} */
 
-@media only screen and (max-width: 480px) {
+.sign-up input[type="email"] {
+    width: 50%;
+    padding: 10px;
+}
+
+
+.sign-up input[type="submit"] {
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 0.9em;
+    box-shadow: var(--box-shadow);
+}
+
+
+h4 {
+    text-align: center;
+    margin: 5px auto;
+    font-size: 2rem;
+}
+
+
+/* media queries for responsive design */
+
+
+@media only screen and (max-width: 281px) {
+    video {
+        max-width: 90%;
+        margin: 0px auto;
+    }
 
     .text-container1 {
-        width: 60%;
-        margin: 0px 85px;
+        max-width: 90%;
+        margin: 0px auto;
     }
-    video {
-        margin: 0px 100px;
-        margin-top: 50px;
-        display: flex;
-        justify-content: center; /* Horizontal centering */
-        align-items: center;
-        width: 50%;
-    }
-
-    #header {
-        margin: 10px 40px;
-        width: 100rem;
-        margin-bottom: 50px;
-        outline: 3px solid red;
-    }
-
-    .logo {
-        margin-top: 5px;
-        margin-left: 1px;
-    }
-
-    #email {
-        margin-bottom: 20px;
-        margin: 10px px;
-        margin-top: 20px;
-    }
-
+    
 }
 
 
-
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     
     .text-container1 {
         width: 60%;
-        margin: 0px 150px;
+        margin: 0px auto;
     }
 
     video {
-        margin: 0px 200px;
-        margin-top: 25px;
-        display: flex;
-        width: 50%;
+        margin: 0px auto;
+        margin-top: 60px;
+        width: 80%;
+        height: auto;
         overflow: hidden;
     }
 
-    #header {
-        margin: 10px 70px;
-        width: 100rem;
-        margin-bottom: 50px;
-        outline: 3px solid red;
-        overflow: hidden;
-    }
 
     .logo {
         margin-top: 5px;
         margin-left: 1px;
-        outline: 3px solid red;
     }
 
-    #email {
-        margin: 0px 250px;
-        margin-top: 10px;
-        width: 40%;
-        padding-bottom: 20px;
+    .sign-up {
+        text-align: center;
+        margin: 20px auto;
+    }
+    
+    #nav-bar {
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 50%;
+        gap: 1px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+    .text-container1 {
+        margin-right: 0.5em;
+        padding-right: 2px;
     }
 
+    .sign-up {
+        margin-bottom: 25px;
+    }
+
+    h4 {
+        margin-top: 2px;
+    }
 }
